@@ -1,0 +1,16 @@
+package com.javarush.games.minesweeper;
+
+import com.javarush.engine.cell.*;
+
+/**
+ * @author devonlain
+ * @link
+ */
+public class MinesweeperGame extends Game {
+    private static final int SIDE=9;
+    @Override
+    public void initialize() {
+        super.initialize();
+        setScreenSize(SIDE, SIDE);
+    }
+}
