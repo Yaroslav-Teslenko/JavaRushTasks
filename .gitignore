@@ -7,14 +7,14 @@ target/
 .repository/
 *.iml
 *.iws
-!*.jrtc
-!*.java
+*.jrtc
+*.java
 *.class
 *.info
 *.properties
 *.jar
 
-/lib/
+
 /out/
 /JavaRushPlugin.properties
 /Instruction.png

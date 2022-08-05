@@ -21,6 +21,7 @@ public class Solution {
         //2. У класі Solution має бути публічна статична змінна ints типу int[].
         //3. У методі main(String[]) виведи в консоль масив strings за допомогою методу Arrays.toString(Object[]).
         //4. У методі main(String[]) виведи в консоль масив ints за допомогою методу Arrays.toString(int[]).
-
+        System.out.println(Arrays.toString(strings));
+        System.out.println(Arrays.toString(ints));
     }
 }
