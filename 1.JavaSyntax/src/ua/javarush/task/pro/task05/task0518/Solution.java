@@ -14,7 +14,7 @@ public class Solution {
         //нСортування масиву
         //Реалізуй метод main(String[]), який сортує масив array за зростанням.
         //Для сортування масиву використовуй метод Arrays.sort(int[]).
-        int[] sortArray=array.sor;
-        System.out.println(Arrays.toString());
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
     }
 }

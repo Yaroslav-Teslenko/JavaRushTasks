@@ -16,6 +16,7 @@ target/
 
 
 /out/
+/lib/
 /JavaRushPlugin.properties
 /Instruction.png
 /out.log
