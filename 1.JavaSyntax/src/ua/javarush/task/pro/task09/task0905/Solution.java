@@ -1,12 +1,9 @@
 package ua.javarush.task.pro.task09.task0905;
 
-import java.util.regex.Pattern;
-
-/* 
+/*
 Вісімковий конвертер
-
-Публічний статичний метод toOctal(int) має перетворювати ціле число, отримане як вхідний параметр, з десяткової
-системи числення у вісімкову. А публічний статичний метод toDecimal(int) навпаки — з вісімкової системи в десяткову.
+Вісімковий конвертер
+Публічний статичний метод toOctal(int) має перетворювати ціле число, отримане як вхідний параметр, з десяткової системи числення у вісімкову. А публічний статичний метод toDecimal(int) навпаки — з вісімкової системи в десяткову.
 Методи діють лише для додатних чисел. Якщо вхідний параметр дорівнює або менший за 0, методи повертають 0.
 Твоє завдання — реалізувати ці методи.
 
@@ -50,12 +47,30 @@ public class Solution {
     }
 
     public static int toOctal(int decimalNumber) {
-        //напишіть тут ваш код
-        return 0;
+        int octalNumber = 0;
+        if (decimalNumber <= 0) {
+            return octalNumber;
+        }
+
+        int i = 0;
+        while (decimalNumber != 0) {
+            octalNumber = (int) (octalNumber + (decimalNumber % 8) * Math.pow(10, i++));
+            decimalNumber = decimalNumber / 8;
+        }
+        return octalNumber;
     }
 
     public static int toDecimal(int octalNumber) {
-        //напишіть тут ваш код
-        return 0;
+        int decimalNumber = 0;
+        if (octalNumber <= 0) {
+            return decimalNumber;
+        }
+
+        int i = 0;
+        while (octalNumber != 0) {
+            decimalNumber = (int) (decimalNumber + (octalNumber % 10) * Math.pow(8, i++));
+            octalNumber = octalNumber / 10;
+        }
+        return decimalNumber;
     }
 }
