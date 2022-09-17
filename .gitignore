@@ -13,8 +13,8 @@ target/
 *.jar
 
 
-/out/*.*
-/lib/*.*
+/out/*
+/lib/*
 /JavaRushPlugin.properties/*.*
 /Instruction.png
 /out.log
