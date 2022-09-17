@@ -2,6 +2,18 @@ package ua.javarush.task.pro.task14.task1414;
 
 /* 
 Готуємо коктейлі
+
+Готуємо коктейлі
+Метод printStackTrace отримує як параметр масив stackTrace. Потрібно вивести інформацію про кожен елемент масиву в такому форматі:
+"Метод <<>ім'я методу<>> викликано з рядка <<>номер рядка<>> класу <<>ім'я класу<>> у файлі <<>ім'я файлу<>>."
+Інформацію про кожен елемент виводь з нового рядка.
+
+Приклад:
+Метод addJuice викликано з рядка 24 класу com.javarush.task.pro.task14.task1414.Solution у файлі Solution.java.
+
+
+Requirements:
+1. Метод printStackTrace має виводити інформацію про кожен елемент масиву stackTrace.
 */
 
 public class Solution {
@@ -14,6 +26,12 @@ public class Solution {
 
     public static void printStackTrace(StackTraceElement[] stackTrace) {
         //напишіть тут ваш код
+        for (StackTraceElement stackTraceElement : stackTrace) {
+            System.out.printf( OUTPUT_FORMAT, stackTraceElement.getMethodName(),
+                    stackTraceElement.getLineNumber(),
+                    stackTraceElement.getClassName(),
+                    stackTraceElement.getFileName());
+        }
     }
 
     static void makeScrewdriver() {

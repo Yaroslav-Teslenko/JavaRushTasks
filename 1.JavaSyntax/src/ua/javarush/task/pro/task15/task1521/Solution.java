@@ -9,10 +9,10 @@ import java.util.Scanner;
 
 /* 
 Тимчасове збереження файлу
-
-Тимчасове збереження файлу
-Напиши код, який зчитує з клавіатури посилання на файл в інтернеті, завантажує його та зберігає в тимчасовому файлі.
-Використай методи createTempFile(null, null) і write(Path, byte[]) класу Files, а також метод openStream() класу URL.
+Напиши код, який зчитує з клавіатури посилання на файл в інтернеті, завантажує
+його та зберігає в тимчасовому файлі.
+Використай методи createTempFile(null, null) і write(Path, byte[])
+класу Files, а також метод openStream() класу URL.
 
 
 Requirements:
@@ -26,6 +26,11 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
-        //напишіть тут ваш код
+        URL url = new URL(line);
+        InputStream input = url.openStream();
+
+        Path tempFile = Files.createTempFile(null, null);
+        Files.write(tempFile, input.readAllBytes());         //Выводим строку на экран
+
     }
 }
