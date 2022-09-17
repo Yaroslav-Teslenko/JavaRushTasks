@@ -13,9 +13,9 @@ target/
 *.jar
 
 
-/out/
+/out/*.*
 /lib/*.*
-/JavaRushPlugin.properties
+/JavaRushPlugin.properties/*.*
 /Instruction.png
 /out.log
 /out.log.*
